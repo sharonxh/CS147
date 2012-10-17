@@ -15,10 +15,27 @@
 	
 		<div class="banner"></div>
 		
-		<table>
-		<!-- This is where we'll put all our content -->
 		
-		</table>
+<?php
+
+?>
+include ("menu.php:");
+<table>
+include("config.php"); // which contains connection to database
+$query = "select * from books";
+
+// Don’t be intimidated by the following lines. You can pretty much
+// always copy and paste these because they’re sort of like
+// functional bits that never change.
+$result = mysql_query($query);
+while ($row = mysql_fetch_assoc($result)) {
+	echo "<p>".$row["title"]."</p>"; // its an array, array indexing
+	echo "<p>".$row["author"]."</p>";
+}
+</table>
+
+		
+		
 		
 		<script type="text/javascript">
 		$("a").click(function (event) {
