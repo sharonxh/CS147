@@ -2,19 +2,15 @@
 <html>
 	<head>
 		<title>DeadDrop</title>
-		<link rel="apple-touch-icon" href="appicon.png" />
-		<link rel="apple-touch-startup-image" href="startup.png">
+		<link rel="apple-touch-icon" h\="appicon.png" />
+		<link rel="apple-touch-startup-image" h\="startup.png">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<<<<<<< HEAD
 		<!-- Stylistic conflict.-->
-
-=======
->>>>>>> 8865913693746c227d84e5de89407297f0367e59
 	</head>
 
 	<body>
@@ -26,27 +22,53 @@
 
 		<!-- This is, well, the bottom bit -->
 		<div class="bottombit">
-			<p class="explanation">Intrepid spy, your next dead drop location is 37.4258709,-122.1712977. Be careful. Don't drop dead. </p>
+			<p class="explanation">Intrepid spy, your next dead drop location is 37.4258709,-122.1712977. Be careful.</p>
 			<div id="button">Refresh GPS: <div id="timer"></div></div>
 
 			<div class="area">
-<<<<<<< HEAD
-				<div class="box box1"><div class="latitude">Swimming is Fun</div></div>
-=======
-				<div class="box box1"><div class="latitude">Blah</div></div>
->>>>>>> 8865913693746c227d84e5de89407297f0367e59
-				<div class="box box2"><div class="longitude"></div></div>
+			
+			<div class="box">
+			<img src="Ribbon.png" height="64" style ="max-width: 320px" alt="Whole Ribbon" usemap="#ribbonMap">
+			<map name="ribbonMap">
+				<area shape = "rect" coords="0,0,64,64" alt="Progress" href="http://www.google.com"> </area>
+				<area shape = "rect" coords="64,0,128,64" alt="Log Activity" href="http://www.yahoo.com">				
+				<area shape = "rect" coords="128,0,192,64" alt="Log Activity" href="http://www.thesharontan.com">
+				<area shape = "rect" coords="192,0,256,64" alt="Log Activity" href="http://www.stackoverflow.com">
+				<area shape = "rect" coords="256,0,320,64" alt="Log Activity" href="http://www.altavista.com">
+				</div>
+			<!--
+				<a href = "http://www.google.com">
+					<div class="box">
+					<img src="About.png" height="60" style ="max-width: 60px"/>
+					</div>
+				</a>
+				<div class="box">
+				<img src="Recommend.png" height="60" style ="max-width: 60px"/>
+				</div>
+				<div class="box">
+				<img src="History.png" height="60" style ="max-width: 60px"/>
+				</div>
+				<div class="box">
+				<img src="LogActivity.png" height="60" style ="max-width: 60px"/>
+				</div>
+				<div class="box">
+				<img src="Progress.png" height="60" style ="max-width: 60px"/>
+				</div>
+-->
+
+			</div>
+			<div class="trial">
+				<div class="ribbonIcon"> </div>
 			</div>
 
 		</div>
 
 		<!-- Let's put in a timer here -->
 		<script type="text/javascript">
-<<<<<<< HEAD
 	var count = 30;
 	var counter = setInterval(timer, 1000); 	
 	function timer() {
-	   count = count - 1;
+	   count = count;
     	if (count <= 0) {
         	clearInterval(counter);
 	        alert("Boom!");
@@ -56,30 +78,10 @@
     	}
     	document.getElementById("timer").innerHTML = count + " secs";
 }
-		
-		
-=======
-		var count = 30;
-		var counter = setInterval(timer, 1000); 
-		
-		function timer() {
-		    count = count - 1;
-		    if (count <= 0) {
-		        clearInterval(counter);
-		        alert("Boom!");
-		        document.getElementById('button').style.visibility = 'hidden';
-		        return;
-		    }
-		
-		    document.getElementById("timer").innerHTML = count + " secs";
-		}
->>>>>>> 8865913693746c227d84e5de89407297f0367e59
-
 		</script>
 		
 		<!-- Let's put in the geolocation stuff here -->
 		<script type="text/javascript">
-<<<<<<< HEAD
 	$(function () { <!-- means window.onload, really.>
 	
    	 $("#button").click(function () {	 
@@ -92,9 +94,7 @@
 	});
 	
 	$(function () {
-=======
 		$(function () {
->>>>>>> 8865913693746c227d84e5de89407297f0367e59
     $("#button").click(function () {
         getLocation();
     });
@@ -110,16 +110,13 @@ function getLocation() {
 
 function showPosition(position) {
     $(".box1").html(position.coords.latitude);
-<<<<<<< HEAD
     $(".box2").html(position.coords.longtitude);
 <!--    alert(position.coords.longitude);
 }
-=======
     $(".box2").html(position.coords.longitude);
 } 
 
 getLocation();
->>>>>>> 8865913693746c227d84e5de89407297f0367e59
 		</script>
 	</body>
 </html>

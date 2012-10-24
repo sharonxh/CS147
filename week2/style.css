@@ -20,8 +20,6 @@
 			height:250px;
 			background: linear-gradient(180deg, #087195, #000);
 			background: -webkit-linear-gradient(#000, #087195);
-
-
 		}
 		.explanation {
 			background:#8fc2d6;
@@ -49,27 +47,23 @@
 		}
 		.area {
 			float:left;
-			clear:both;
-			padding:10px;
+			clear:both; /*I don't know what this does*/
+			margin-top:10px;
 		}
 		.box {
-			width:100px;
+			width:320px;
 			float:right;
 			padding:0px;
 			color:#fff;
-			height:50px;
-			margin:20px;
+			height:62px;
+			margin:0px;
 			background:#fff;
-			border:3px solid #4889a3;
+			text-align: center;
 		}
-		.box1 {
-			background:#1E3F6E;
-		}
-		.box1 {
-			background:#000;
-		}
-		.box2 {
-			background:#1E5B6E;
+		.ribbonIcon {
+			width:64px;
+			float:right;
+			height:64px;
 		}
 		.blue {
 		  	color:#ffffff;
