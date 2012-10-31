@@ -23,15 +23,18 @@
 include ("menu.php:");
 <table>
 include("config.php"); // which contains connection to database
-$query = "select * from books";
+$query = "select * from clarity_username where 'when' > \'2012-10-28'\";
 
 // Don’t be intimidated by the following lines. You can pretty much
 // always copy and paste these because they’re sort of like
 // functional bits that never change.
 $result = mysql_query($query);
+
+<!--First, try getting the data i need into a table.>
 while ($row = mysql_fetch_assoc($result)) {
-	echo "<p>".$row["title"]."</p>"; // its an array, array indexing
-	echo "<p>".$row["author"]."</p>";
+	echo "<p>".$row["what"]."</p>"; // its an array, array indexing
+	echo "<p>".$row["how"]."</p>";
+	echo "<p>".$row["when"]."</p>";
 }
 </table>
 
